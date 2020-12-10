@@ -40,6 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 mXrv.loadMoreComplete();
             }
         });
-        mXrv.setAdapter(new MyAdapter(MainActivity.this));
+        mXrv.setAdapter(new MyAdapter());
     }
 }

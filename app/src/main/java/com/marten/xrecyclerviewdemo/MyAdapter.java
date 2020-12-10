@@ -1,29 +1,21 @@
 package com.marten.xrecyclerviewdemo;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
 public class MyAdapter extends XRecyclerView.Adapter {
 
-    private Context mContext;
-
-    public MyAdapter(Context context) {
-        mContext = context;
-    }
-
-
     @NonNull
     @Override
     public XRecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.xrv_item, parent, false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.xrv_item, parent, false));
+
     }
 
     @Override
